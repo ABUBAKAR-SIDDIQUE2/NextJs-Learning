@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+} */
+
+
+
+@layer components {
+  .quote {
+    @apply m-3 p-6 bg-blue-100 rounded-lg;
+  }
+
+  .quote p {
+    @apply font-serif italic text-lg text-gray-700 leading-snug mb-1;
+  }
+
+  .quote span {
+    @apply text-sm text-gray-500;
+  }
+
+  /* for flex-justify route */
+  a {
+    @apply bg-blue-50 text-gray-800 py-2 px-6 rounded-full;
+  }
+
+  a.active {
+    @apply bg-blue-500 text-white;
+  }
+
+  /* for  justify-content-concepts*/
+  .menu {
+    @apply bg-white p-2 rounded-full mb-7;
+  }
+
+  h3 {
+    @apply font-bold mb-3 font-mono;
+  }
+
+
+  /* flex justify-between */
+  .card {
+    @apply bg-white p-9 max-w-xs rounded-lg m-8;
+  }
+
+  .card h1 {
+    @apply font-bold text-3xl text-blue-600;
+  }
+
+  .card p {
+    @apply mt-4;
+  }
+
+  .links {
+    @apply mt-4;
+  }
+
+  .links a {
+    @apply px-4 py-2 bg-blue-200 rounded-md text-gray-900 text-sm;
+  }
+
+
+  .container {
+    @apply w-auto max-w-none m-14;
+  }
+
+  .team-profile {
+    @apply text-center px-6 py-4;
+  }
+
+  .team-profile img {
+    @apply w-32 h-32 object-cover rounded-full object-top;
+  }
+
+  .team-profile h3 {
+    @apply font-bold text-xl;
+  }
+
+  .team-profile p {
+    @apply text-sm text-gray-600;
+  }
+
+  .wrapper {
+    @apply flex justify-between items-center;
+  }
+
+  .icon-wrap {
+    @apply m-12;
+  }
+
+  .icon {
+    @apply inline-block p-3 bg-pink-600 text-white rounded;
+  }
+
+  .icon-text {
+    @apply text-lg border border-gray-400 px-3;
+  }
+
+
+  .wrapper {
+    @apply bg-white w-80 mt-16 mx-auto rounded-md text-center p-10;
+    height: 28rem;
+  }
+
+  .link {
+    @apply block mt-4 py-2 px-4 rounded-md border border-cyan-500;
+  }
+
+  .login-link {
+    @apply bg-cyan-500 text-white;
+  }
+
+  .card {
+    @apply bg-white w-72 h-80 p-8 rounded-xl mt-20 mx-auto;
+  }
+
+  .card img {
+    @apply h-10;
+  }
+
+  .card span {
+    @apply font-bold text-lg;
+  }
+}
+
+@layer base {
+  body {
+    /* @apply bg-gray-200 text-gray-600; */
+    /* @apply text-gray-800; */
+    @apply bg-gray-100 text-gray-700;
+  }
+}
